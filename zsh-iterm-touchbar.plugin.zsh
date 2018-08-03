@@ -127,8 +127,8 @@ function _displayDefault() {
 
   # CURRENT_DIR
   # -----------
-  pecho "\033]1337;SetKeyLabel=F1=👉 $(echo $(pwd) | awk -F/ '{print $(NF-1)"/"$(NF)}')\a"
-  bindkey -s '^[OP' 'pwd \n'
+  # pecho "\033]1337;SetKeyLabel=F1=👉 $(echo $(pwd) | awk -F/ '{print $(NF-1)"/"$(NF)}')\a"
+  # bindkey -s '^[OP' 'pwd \n'
 
   # GIT
   # ---
@@ -150,23 +150,23 @@ function _displayDefault() {
     indicators+="$(git_stashed)"
     indicators+="$(git_unpushed_unpulled)"
 
-    [ -n "${indicators}" ] && touchbarIndicators="🔥[${indicators}]" || touchbarIndicators="🙌";
+    [ -n "${indicators}" ] && touchbarIndicators="⚡️" || touchbarIndicators="✅";
 
-    setKey 2 "🎋 `git_current_branch`" _displayBranches '-q'
-    setKey 3 $touchbarIndicators "git status"
-    setKey 4 "🔼 push" "git push origin $(git_current_branch)"
-    setKey 5 "🔽 pull" "git pull origin $(git_current_branch)"
+    setKey 4 "🚜 `git_current_branch`" _displayBranches '-q'
+    setKey 1 $touchbarIndicators "git status"
+    setKey 3 "🔼 push" "git push origin $(git_current_branch)"
+    setKey 2 "🔽 pull" "git pull origin $(git_current_branch)"
   fi
 
   # PACKAGE.JSON
   # ------------
-  if [[ $(find-up package.json) != "" ]]; then
-      if [[ $(find-up yarn.lock) != "" ]] && [[ "$YARN_ENABLED" = true ]]; then
-          setKey 6 "🐱 yarn-run" _displayYarnScripts '-q'
-      else
-          setKey 6 "⚡️ npm-run" _displayNpmScripts '-q'
-    fi
-  fi
+  # if [[ $(find-up package.json) != "" ]]; then
+  #     if [[ $(find-up yarn.lock) != "" ]] && [[ "$YARN_ENABLED" = true ]]; then
+  #         setKey 6 "🐱 yarn-run" _displayYarnScripts '-q'
+  #     else
+  #         setKey 6 "⚡️ npm-run" _displayNpmScripts '-q'
+  #   fi
+  # fi
 }
 
 function _displayNpmScripts() {
