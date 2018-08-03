@@ -1,6 +1,6 @@
 # zsh iTerm Touchbar
 
-> Display feedback of terminal in the 🍏 Touchbar
+> Display feedback of terminal in the 🍎 Touchbar
 
 ![preview1](./preview1.jpg)
 
@@ -8,17 +8,10 @@
 
 Currently it shows:
 
-  * F1 - Current directory 👉
-  * F2 - Current git branch, press to display all branches and switch between them 🎋
-  * F3 - Current git repo status 🔥 / 🙌
-    * `+` — uncommitted changes in the index;
-    * `!` — unstaged changes;
-    * `?` — untracked changes;
-    * `$` — stashed changes;
-    * `⇣` — unpulled commits;
-    * `⇡` — unpushed commits.
-  * F4 - Push to origin branch (git push origin [branch]) ✉️
-  * F5 - Display `npm-run` or `yarn-run` scripts from `package.json` ⚡️ /🐱
+  * F1 - Current git repo status ⚡️ / ✅
+  * F2 - Push to origin branch (git push origin [branch]) 🔼
+  * F3 - Pull from origin branch (git pull origin [branch]) 🔽
+  * F4 - Current git branch, press to display all branches and switch between them 🚜
 
 ### Requirements
 
